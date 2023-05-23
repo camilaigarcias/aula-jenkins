@@ -10,7 +10,16 @@ pipeline {
         }
          stage('Instalar dependências') {
             steps {
-                powershell 'npm install'
+                powershell 'npm install --save-dev start-server-and-test
+'
+               
+                
+            }
+        }
+        
+          stage('Instalar servidor') {
+            steps {
+                powershell 'cy:run-cy': 'start-server-and-test start http://localhost:3000/usuarios test'
                
                 
             }
