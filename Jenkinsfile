@@ -10,7 +10,7 @@ pipeline {
         }
          stage('Instalar dependências') {
             steps {
-                powershell 'npm install --save-dev start-server-and-test
+                powershell 'npm install --save-dev start-server-and-test'
 '
                
                 
