@@ -19,7 +19,7 @@ pipeline {
         
           stage('Instalar servidor') {
             steps {
-                powershell 'cy:run-cy': 'start-server-and-test start http://localhost:3000/usuarios test'
+                powershell 'cy:run-ci': 'start-server-and-test start http://localhost:3000/usuarios test'
                
                 
             }
