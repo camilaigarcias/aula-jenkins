@@ -10,13 +10,18 @@ pipeline {
         }
          stage('Instalar dependências') {
             steps {
-                powershell 'npm install'
-'
+                bat 'npm install'
    
                 
             }
         }
-        
+         stage('Instalar dependências') {
+            steps {
+                bat 'npm start'
+   
+                
+            }
+        }
          stage('Executar testes') {
             steps {
               powershell 'npm run cy:run'
